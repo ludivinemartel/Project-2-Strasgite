@@ -1,0 +1,57 @@
+{%extends 'layout.html.twig' %}
+
+{% block content %}
+<link rel="stylesheet" href="/assets/css/confirmation.css">
+<link rel="stylesheet" href="/assets/css/navbar.css" />
+{%  include "layout/navbar.html.twig" %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page confirmation</title>
+  <link rel="stylesheet" href="/dossier html/assets/css/confirmation.css">
+</head>
+<body>
+    <form method="post" action="/">
+        <h3> CONFIRMATION RÉSERVATION</h3>
+        <h6 class="text"> RÉCAPITULATIF COMMANDE</h6>
+        <div class="box_1">
+            <div class="inputBox_1">
+                <p>Date d'arrivée : {{ reservation['dateArrivee']|date('d/m/Y', 'Europe/Paris') }}</p>
+            </div>
+
+            <div class="inputBox_1">
+                <p>Date de départ : {{ reservation['dateDepart']|date('d/m/Y', 'Europe/Paris')}}</p>
+            </div>
+            <div class="inputBox_1">
+                <p>Nombre de personnes : {{ reservation['nbPersonnes'] }}</p>
+            </div>
+            <div class="inputBox_1">
+                <p>Options supplémentaires : {{ reservation['optionsSupp'] }}</p>
+            </div>
+            <div class="inputBox_1">
+            Prix total de votre réservation : {{ totalPrice }} €
+            </div>
+            <div class="inputBox_2">
+                <label for="nom">Nom : </label>
+                <input type="text" id="nom" name="name" size="50">
+            </div>
+            <div class="inputBox_2">
+                <label for="prénom"> Prénom : </label>
+                <input type="text" id="prénom" name="prénom" size="50">
+            </div>
+            <div class="inputBox_2">
+                <label for="number_phone">Numéro de télephone : </label>
+                <input type="text" id="number_phone" name="number_phone" size="30">
+            </div>
+            <div class="inputBox_2">
+                <label for="mail">Adresse Mail : </label>
+                <input type="email" id="mail" name="mail" size="50">
+            </div>
+        <div>
+        </div>
+          <button>PAYER</button>
+        </div>
+    </form>
+</body>
+{% endblock %}

@@ -1,0 +1,224 @@
+.cta
+{
+-webkit-transform: rotate(270deg);
+-moz-transform: rotate(270deg);
+-ms-transform: rotate(270deg);
+-o-transform: rotate(270deg);
+transform: rotate(270deg);
+position: absolute;
+right: 0px; /* ajustez cette valeur pour déplacer le bouton horizontalement */
+top: 50%; /* ajustez cette valeur pour placer le bouton verticalement */
+transform-origin: bottom right;
+}
+
+.ctabutton{
+  color: white;
+  font-size: 1.2em;
+  padding: 10%;
+  background-color: #d89723;
+}
+
+p
+{
+font-size: small;
+}
+
+h1{
+color:var(--main-color);
+}
+.presentation
+{
+display: flex;
+flex-direction: row;
+}
+
+.textetimages{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.white{
+  background-color: white;
+  /* margin: 10%; */
+  padding: 2%;
+}
+.description{
+  margin-top: 10%;
+  margin-bottom: 10%;}
+
+.textedepresentation
+{
+margin-top: 10%;
+margin-bottom: 10%;
+
+}
+
+.address{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+  /* css formulaire de réservation */
+h2 
+{
+margin: 0;
+padding: 25px;
+font-size: 20px;
+text-align: center;
+color: white;
+background-color: var(--main-color);
+font-family: 'Raleway', sans-serif;
+border-radius: 10px;
+}
+
+h2 i 
+{
+padding-right: 10px;
+font-size: 24px;
+}
+
+.hotel-reservation-form 
+{
+background-color: var(--main-color);
+margin: 5%;
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+font-family: 'Raleway', sans-serif;
+border-radius: 10px;
+}
+
+.hotel-reservation-form .fields 
+{
+position: relative;
+padding: 20px;
+}
+
+.hotel-reservation-form select 
+{
+appearance: none;
+background-position: calc(100% - 20px) 20px, calc(100% - 15px) 20px, calc(100% - 40px) 10px;
+background-size: 5px 5px, 5px 5px, 1px 25px;
+background-repeat: no-repeat;
+}
+
+.hotel-reservation-form select option:first-child 
+{
+display: none;
+}
+.hotel-reservation-form input[type="date"]::-webkit-calendar-picker-indicator 
+{
+color: #ddd;
+filter: invert(0.8);
+}
+
+.hotel-reservation-form input[type="text"], 
+.hotel-reservation-form input[type="date"],
+.hotel-reservation-form select 
+{
+display: flex;
+margin-top: 10px;
+padding: 5px;
+border: 1px solid #dfe0e0;
+flex-basis: 100%;
+height: 47px;
+border-radius: 10px;
+}
+
+.hotel-reservation-form input[type="text"]:focus, 
+.hotel-reservation-form input[type="date"]:focus,
+.hotel-reservation-form select:focus 
+{
+border: 1px solid #c6c7c7;
+}
+.hotel-reservation-form input[type="text"]::placeholder, 
+  
+.hotel-reservation-form input[type="date"]:invalid, 
+.hotel-reservation-form textarea::placeholder,
+.hotel-reservation-form select:invalid 
+{
+color: #858688;
+}
+.hotel-reservation-form textarea 
+{
+resize: none;
+border: 1px solid #dfe0e0;
+width: 100%;
+}
+
+.hotel-reservation-form textarea:focus 
+{
+border: 1px solid #c6c7c7;
+}
+
+.hotel-reservation-form input[type="submit"] 
+{
+display: block;
+margin-top: 15px;
+padding: 15px;
+border: 0;
+background-color: white;
+font-weight: bold;
+color:var(--main-color);
+cursor: pointer;
+width: 100%;
+border-radius: 10px;
+}
+
+.hotel-reservation-form .field 
+{
+display: inline-flex;
+position: relative;
+width: 100%;
+padding-bottom: 20px;
+}
+
+.hotel-reservation-form label 
+{
+font-size: 14px;
+font-weight: 600;
+color: white;
+}
+
+.hotel-reservation-form .field i 
+{
+position: absolute;
+color: #dfe2e5;
+top: 25px;
+left: 15px;
+z-index: 10;
+}
+
+.hotel-reservation-form .responses 
+{
+margin: 0;
+}
+.hotel-reservation-form .fields .wrapper 
+{
+display: flex;
+justify-content: space-between;
+}
+
+.hotel-reservation-form .fields .wrapper > div 
+{
+width: 100%;
+}
+
+.hotel-reservation-form .fields .wrapper .gap 
+{
+width: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+
+h1{
+  margin-top: 20%;
+}
+  .presentation {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+
+  .reservationform {
+    margin-top: 20px;
+  }
+}

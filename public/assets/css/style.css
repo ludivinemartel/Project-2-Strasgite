@@ -1,0 +1,362 @@
+*
+{
+margin: 0;
+}
+
+:root
+{
+--main-color :#d89723;
+}
+
+body 
+{
+font-family: 'Raleway', sans-serif;
+}
+
+/* css header photo*/
+
+header
+{
+background-image: url(/assets/images/HOMEPAGE/photo_header.jpg);
+background-size: cover;
+}
+
+.strasbourg
+{
+max-width: 100%;
+height: auto;
+}
+
+.rectangle
+{
+width: 500px;
+height: 200px;
+background-color: white;
+opacity: 0.6;
+position: absolute;
+z-index: 2;
+top :0;
+margin: 20%;
+}
+
+/* css titre h1/ h2/ h3*/
+h1
+{
+position: absolute;  
+z-index: 3;
+margin: 3%;
+color: white;
+top:0;
+margin: 25%;
+}
+
+.decalage
+{
+margin-left: 8%;
+}
+
+.decalageavis 
+{
+margin-top: 8%;
+margin-left: 8%;
+}
+
+h2, h3
+{
+color: var(--main-color);
+}
+
+h3
+{
+font-weight: 100;
+font-size: 1.2rem;
+}
+
+/* css presentation de la maison d'hotes */
+a
+{
+text-decoration: none;
+color: var(--main-color);
+font-size: 1.2em;
+}
+
+a:hover
+{
+text-decoration: underline;
+}
+
+.presentation
+{
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+justify-content: center;
+padding: 5%;
+}
+
+.background
+{
+background-color: white;
+padding: 8%;
+}
+
+.textedepresentation
+{
+margin-top: 10%;
+margin-bottom: 10%;
+}
+
+.photomaison
+{
+margin-right: -5%;
+margin-left: 3%;
+}
+
+/* css accordeon */
+h4
+{
+color: white;
+font-size: 1.2em;
+-webkit-transform: rotate(270deg);
+-moz-transform: rotate(270deg);
+-ms-transform: rotate(270deg);
+-o-transform: rotate(270deg);
+transform: rotate(270deg);
+position: absolute;
+bottom: 100px;
+}
+
+.ctr-accordion
+{
+    height: 720px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    gap: 20px;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.tab
+{
+    position: relative;
+    width: 20%;
+    height: inherit;
+    padding: 20px;
+    background: rgb(150,150,150);
+    cursor: pointer;
+    transition: width .5s ease;
+}
+ 
+.tab img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+ 
+.tab:hover img
+{
+opacity: 0.6;
+}
+ 
+.tab:hover
+{
+width: 80%;
+}
+
+/* css avis clients*/
+.avisclient
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.avis
+{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    text-align: center;
+    padding: 2%;
+}
+
+.star
+{
+color: var(--main-color);
+}
+
+
+/* style Chambre */
+.ra-orange{
+    background-color:#d89723;
+}
+.ra-style{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Pour les écrans jusqu'à 768px de largeur */
+@media screen and (max-width: 768px) {
+
+    header {
+    background-size: contain;
+    }
+    
+    .rectangle {
+    width: 90%;
+    height: 150px;
+    margin: 10%;
+    }
+    
+    h1 {
+    margin: 10%;
+    font-size: 2em;
+    }
+    
+    .presentation {
+    flex-direction: column;
+    }
+    
+    
+    .decalage {
+    display: none;   
+    }
+    .photomaison{
+    display: none;   
+    }
+    .ctr-accordion {
+    display: none;
+    }
+    
+    .tab {
+    width: 100%;
+    margin-bottom: 5%;
+    }
+    
+    .avisclient {
+    flex-direction: column;
+    }
+    
+    .avis {
+    margin: 5%;
+    }
+    }
+    
+    /* Pour les écrans jusqu'à 992px de largeur */
+    @media screen and (max-width: 992px) {
+    
+    .presentation {
+    flex-direction: column;
+    }
+    
+    .photomaison {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10%;
+    }
+    
+    .tab {
+    width: 50%;
+    margin-bottom: 5%;
+    }
+    
+    .avis {
+    margin: 5%;
+    }
+    }
+
+      #mouse-scroll {
+        position: absolute;
+        margin: auto;
+        left: 50%;
+        top: 90%;
+        -webkit-transform: translateX(-50%);
+        z-index: 9999;
+      }
+      #mouse-scroll span{
+        display: block;
+        width: 5px; 
+        height: 5px;
+        -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+             transform: rotate(45deg);
+             transform: rotate(45deg);
+        border-right: 2px solid #fff; 
+        border-bottom: 2px solid #fff;
+        margin: 0 0 3px 5px;
+      }
+      #mouse-scroll .mouse {
+        height: 21px;
+        width: 14px;
+        border-radius: 10px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border: 2px solid #ffffff;
+        top: 170px;
+      }
+      #mouse-scroll .down-arrow-1 {
+        margin-top: 6px;
+      }
+   
+      #mouse-scroll .mouse-in {
+        height: 5px;
+        width: 2px;
+        display: block; 
+        margin: 5px auto;
+        background: #ffffff;
+        position: relative;
+      }
+      #mouse-scroll .mouse-in {
+       -webkit-animation: animated-mouse 1.2s ease infinite;
+        moz-animation: mouse-animated 1.2s ease infinite;
+      }
+      
+      @-webkit-keyframes animated-mouse {
+        0% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+           opacity: 0;
+          -webkit-transform: translateY(6px);
+          -ms-transform: translateY(6px);
+          transform: translateY(6px);
+        }
+      }
+      @-webkit-keyframes mouse-scroll {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+        100% {
+          opacity: 1;
+        } 
+      }
+      @keyframes mouse-scroll {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      

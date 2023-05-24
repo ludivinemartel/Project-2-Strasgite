@@ -1,0 +1,67 @@
+/* navbar css particulier */
+
+nav ul li
+{
+list-style: none;
+padding: 3%;
+
+}
+nav
+{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+width: 100%;
+}
+
+ul
+{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+flex-wrap: nowrap;
+align-content: flex-end;
+align-items: center;
+position : absolute;
+right: 0;
+width: 50%;
+margin-left: auto;
+}
+
+a
+{
+text-decoration: none;
+
+}
+
+.logo
+{
+height: 50px;
+width: 50px;
+position : absolute;
+left: 0;
+top : 0;
+}
+
+.icon ul .reservation
+{
+border-style: solid ;
+border-color: white; 
+padding: 1%;
+}
+
+/* Pour les écrans jusqu'à 768px de largeur */
+@media screen and (max-width: 768px) {
+    .logo{
+        display : none;
+    }
+
+    nav{
+        width: 50%;
+    }
+
+    nav ul li {
+        font-size: 8px;
+      }
+}

@@ -1,0 +1,59 @@
+{%extends 'layout.html.twig' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+{%  include "layout/navbar.html.twig" %}
+<link rel="stylesheet" href="/assets/css/navbar.css" />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page de contact</title>
+  <link rel="stylesheet" href="/2023-02-PHP-Strasbourg-project-2-strasgite/public/assets/css/contact.css">
+</head>
+<body>
+    <section class="formulaire">
+        <div class="container">
+            <form action="" method="post" id="form">
+                <h7>CONTACT</h7>
+                <div class="form_container">
+                    <div class="input_container">
+                        <div class="input_bloc">
+                            <div class="input_box">
+                                <label for="nom">NOM</label>
+                                <input type="text" id="nom" name="nom" size="130">
+                            </div>
+                            <div class="input_box">
+                                <label for="prenom">PRÉNOM</label>
+                                <input type="text" id="prenom" name="prenom" size="100">
+                            </div>
+                        </div>
+                        <div class="input_bloc">
+                            <div class="input_box">
+                                <label for="number">NUMERO DE TÉLÉPHONE</label>
+                                <input type="text" id="number" name="number" size="100">
+                            </div>
+                        </div>
+                        <div class="input_bloc">
+                            <div class="input_box">
+                                <label for="email">ADRESSE MAIL</label>
+                                <input type="email" id="email" name="email" size="100">
+                            </div>
+                    <div class="message"><label for="message">VOTRE MESSAGE</label></div>
+                    <div class="box">
+                        <textarea id="message" rows="10" cols="110"></textarea>
+                    </div>
+                    <div class="input_box"></div>
+                </div>
+                {% if confirm %}
+                <div class="alert alert-success">{{ confirm }}</div>
+                {% endif %}
+                <button>ENVOYER</button>
+                 </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>    
+{% endblock %}
+

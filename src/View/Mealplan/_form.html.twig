@@ -1,0 +1,53 @@
+{# TODO : manage errors display #}
+
+<nav class="uk-navbar-container">
+    <div class="uk-container rb-navbar">
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <div><a class="rb-border-button" href="/">AIR CNC</a></div>   
+						<li>Gestion des options</li>
+                        <div>
+                            <a class="rb-navbar">Gestion des services</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="/rooms">Gestion des chambres</a></li>
+                                    <li><a href="/reservations">Gestion des réservations</a></li>
+                                    <li><a href="/users">Gestion des membres</a></li>
+                                    <li><a href="/mealplans">Gestion des options</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+					<div><a class="rb-navbar" href="/dashboard">Dashboard</a></div> 
+                    <li><span uk-icon="icon: user; ratio: 1.5"></span>Admin</li>
+                    <div><a class="rb-border-button" href="/logout">Logout</a></div>   
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h2>Ajouter/modifier une option</h2>
+
+<form method="post" class="uk-form-horizontal uk-margin-large">
+	<input type="hidden" value="{{ mealplan.id }}" name="id">
+    <div class="uk-margin">
+        <label class="uk-form-label" for="name">Option repas :</label>
+       		<div class="uk-form-controls">
+            	<input class="uk-input" id="form-horizontal-text" type="text" value="{{ mealplan.type }}" id="type" name="type">
+        	</div>
+    </div>
+	<div class="uk-margin">
+        <label class="uk-form-label" for="name">Prix :</label>
+       		<div class="uk-form-controls">
+            	<input class="uk-input" id="form-horizontal-text" type="text" value="{{ mealplan.price }}" id="price" name="price">
+        	</div>
+    </div>
+	<div>
+		<button class="uk-button rb-button" type="submit" name="submit">Submit</button>
+	</div>	
+</form>

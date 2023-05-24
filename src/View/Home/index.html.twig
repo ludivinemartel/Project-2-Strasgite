@@ -1,0 +1,94 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Maison d'hôtes Strasbourg{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/assets/css/navbarhome.css"/>
+<nav>
+    <div class="logo">
+      <img src="/assets/images/NAVBAR/logo.png" height='150px' width='180px'>
+    </div>
+    <div class="icon">
+      <div class="test">
+      <ul>
+        <li><a href="/">ACCUEIL</a></li>
+        <li><a href="/chambre">CHAMBRES</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+        <li class="reservation"><a href="/reservation" class="active">RÉSERVATION</a></li>
+        <li><a href="/login"><img src="/assets/images/NAVBAR/user.png" height='30px'></a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+<section class="position">
+    <img class="strasbourg" src="/assets/images/HOMEPAGE/photo_header.jpg" alt="illustration Strasbourg" ;>
+    <div class="rectangle"></div>
+    <h1> MAISON D’HÔTES </br> AU CENTRE DE </br>STRASBOURG</h1>
+    <div id="mouse-scroll">
+        <div class="mouse">
+          <div class="mouse-in"></div>
+        </div>
+</section>
+<section class="presentation">
+    <div class="background">
+        <h2>NOTRE CHAMBRE D'HÔTES</h2>
+        <h3>Au cœur de Strasbourg</h3>
+        <p class="textedepresentation"> Bienvenue dans notre charmante chambre d'hôtes située au cœur de Strasbourg.
+            Notre établissement vous offre un véritable havre de paix.</br>
+            Nos chambres sont aménagées avec goût et confort, pour que vous vous sentiez comme chez vous. Chaque chambre
+            dispose d'une salle de bains privative, d'une connexion Wi-Fi gratuite et de toutes les commodités
+            nécessaires pour vous assurer un séjour agréable.</br>
+            Notre emplacement est idéal pour explorer les rues pavées de Strasbourg, visiter la cathédrale de la ville,
+            découvrir les marchés de Noël et déguster les spécialités culinaires alsaciennes.</br>
+            Que vous soyez en voyage d'affaires ou en vacances, notre chambre d'hôtes est l'endroit parfait pour vous
+            détendre et profiter de votre séjour à Strasbourg. Nous espérons vous accueillir bientôt !</p>
+        <a class="cta" <a href="/chambre">Les chambres</a></br>
+        <a class="cta"> <a href="/contact">Contact</a></br>
+            <a class="cta"><a href="/chambre">Réservation</a></br>
+    </div>
+    </div>
+    <img class="photomaison" src="/assets/images/HOMEPAGE/photo_maisonhotes.jpg" alt="illustration maison" width="40%">
+</section>
+
+<section>
+    <h2 class="decalage">LES CHAMBRES</h2>
+    <div class="ctr-accordion">
+        {% for chambre in chambresTwig %}
+        <div class="tab">
+            <a href="/bedroom?id={{chambre.id}}">
+                <img src="{{chambre.image}}">
+            </a>
+            <h4>CHAMBRE {{chambre.id}}</h4>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2 class="decalageavis">LES AVIS CLIENTS</h2>
+    <div class="avisclient">
+        <div class="avis">
+            <img class="client" src="/assets/images/HOMEPAGE/AVIS_CLIENTS/avis1.png" alt="photo client femme"
+                width="30%">
+            <p class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+            <p class="texteavis">Notre séjour dans cette maison d'hôtes a été fantastique ! La chambre était
+                impeccablement propre et confortable, et l'emplacement était parfait pour explorer la ville. </p>
+        </div>
+        <div class="avis">
+            <img class="client" src="/assets/images/HOMEPAGE/AVIS_CLIENTS/avis2.png" alt="photo client femme"
+                width="30%">
+            <p class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+            <p class="texteavis">Nous avons été ravis de notre séjour dans cette charmante maison d'hôtes. La chambre
+                était magnifique et décorée avec goût, avec tout le confort nécessaire pour un séjour parfait. </p>
+        </div>
+        <div class="avis">
+            <img class="client" src="/assets/images/HOMEPAGE/AVIS_CLIENTS/avis3.png" alt="photo client homme"
+                width="30%">
+            <p class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+            <p class="texteavis">Nous avons passé un week-end incroyable dans cette maison d'hôtes. La chambre était
+                spacieuse et très propre, avec toutes les commodités nécessaires pour notre confort. </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

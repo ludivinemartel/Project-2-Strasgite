@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>
+    {% block title %}Show Option{% endblock %}
+    </title>
+
+    {% block stylesheet %}
+    <!-- UIkit CSS -->
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"/>
+			<link
+				rel="stylesheet"
+				href="/assets/css/admin.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+        <nav class="uk-navbar-container">
+    <div class="uk-container rb-navbar">
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <div><a class="rb-border-button" href="/">AIR CNC</a></div>   
+						<li>Gestion des options</li>
+                        <div>
+                            <a class="rb-navbar">Gestion des membres</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="/rooms">Gestion des chambres</a></li>
+                                    <li><a href="/reservations">Gestion des réservations</a></li>
+                                    <li><a href="/users">Gestion des membres</a></li>
+                                    <li><a href="/mealplans">Gestion des options</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+					<div><a class="rb-navbar" href="/dashboard">Dashboard</a></div> 
+                    <li><span uk-icon="icon: user; ratio: 1.5"></span>Admin</li>
+                    <div><a class="rb-border-button" href="/logout">Logout</a></div>   
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <h2>Fiche option</h2>
+	<div uk-grid>
+    	<div class="uk-width-1-4 uk-text-right">
+        	<ul class="uk-list">
+            	<li>ID :</li>
+				<li>Option repas :</li>
+				<li>Prix :</li>
+        	</ul>
+    	</div>
+
+    	<div class="uk-width-1-4">
+        	<ul class="uk-list">
+            	<div>{{ mealplan.id }}</div>
+				<div>{{ mealplan.type }}</div>
+				<div>{{ mealplan.price }}</div>
+        	</ul>
+    	</div>
+
+		<div>
+			<a href="/mealplans/edit?id={{mealplan.id}}"><button class="uk-button rb-button">Edit</button></a>
+		</div>
+		<div>	
+			<form action="/mealplans/delete" method="POST">
+				<input type="hidden" name="id" value="{{ mealplan.id }}">
+				<button class="uk-button rb-button">Delete</button>
+			</form>
+		</div>
+	</div>
+
+	<button class="uk-button rb-button">
+		<a href="/mealplans">Retour</a>
+	</button>
+</main>
+
+<footer>
+    <p class="footer">&copy; 2023 AIRCNC Tous droits réservés</p>
+</footer> 
+    {% endblock %}
+
+    {% block javascript %}
+    <!-- UIkit JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+            <script 
+                src="uikit/dist/js/uikit-icons.min.js"></script>
+    {% endblock %}
+</body>
+</html>

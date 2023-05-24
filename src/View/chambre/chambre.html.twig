@@ -1,0 +1,67 @@
+{%extends 'layout.html.twig' %}
+{% block title %}Chambres{% endblock %}
+
+{% block stylesheet %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+{{ parent() }}
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="/assets/css/navbarhome.css"/>
+<nav>
+    <div class="logo">
+      <img src="/assets/images/NAVBAR/logo.png" height='150px' width='180px'>
+    </div>
+    <div class="icon">
+      <div class="test">
+      <ul>
+        <li><a href="/">ACCUEIL</a></li>
+        <li><a href="/chambre">CHAMBRES</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+        <li class="reservation"><a href="/reservation" class="active">RÉSERVATION</a></li>
+        <li><a href="/login"><img src="/assets/images/NAVBAR/user.png" height='30px'></a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+<body class="row justify-content-center">
+	<section>
+		<img src="/assets/images/CHAMBRES/Chambre7.jpg" class="img-fluid" alt="imagechambreprincipale">
+	</section>
+	</header>
+	<p class="h2 p-5">Les Chambres</p>
+	<div class="container">
+		<div class="row">
+			{% for chambre in chambresTwig %}
+			<div class="col-6">
+				<div class="card mb-3">
+					<div class="row g-0">
+						<div class="col-md-4">
+							<img src="{{chambre.image}}"class="img-fluid rounded-start w-100 height:auto">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<h5 class="card-title ra-style1">{{chambre.nameFront}}</h5>
+								<p class="card-text ra-style">{{chambre.resume}}</p>
+								<div class="col">
+								</div>
+								<form action ="/bedroom" method="get">
+									<input type="hidden" name="id" value="{{chambre.id}}"/>
+									<button type="submit" class="btn btn-warning">choisir</button></form>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
+{% endblock %}

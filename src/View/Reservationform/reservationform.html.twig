@@ -1,0 +1,50 @@
+{% block content %}
+<section class="reservationform">
+    <form class="hotel-reservation-form" method="post" action="confirmation">
+        <input type="hidden" name="id" value="{{bedroomTwig.id}}">
+        <h2><i class="far fa-calendar-alt"></i>Réservation</h2>
+        <div class="fields">
+            <div class="wrapper">
+                <div>
+                    <label for="arrival">Arrivée</label>
+                    <div class="field">
+                        <input id="arrival" type="date" name="datestart" required>
+                    </div>
+                </div>
+                <div class="gap"></div>
+                <div>
+                    <label for="departure">Départ</label>
+                    <div class="field">
+                        <input id="departure" type="date" name="dateend" required>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div>
+                    <label for="adults">Nombres de personnes</label>
+                    <div class="field">
+                        <select id="nbPersonnes" name="nbPersonnes" required>
+                            <option disabled selected value="">--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <label for="room_pref">Options supplémentaires</label>
+            <div class="field">
+                <select id="mealplan" name="mealplan">
+                    <option disabled selected value="">--</option>
+                    <option value="Petit-déjeuner">Petit-déjeuner - 15 €</option>
+                    <option value="Demi-pension">Demi-pension - 30 €</option>
+                    <option value="Pension complète">Pension complète - 45 €</option>
+                </select>
+            </div>
+            <div class="gap"></div>
+            <input type="submit" value="RÉSERVER">
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>
+    {% block title %}Login{% endblock %}
+    </title>
+
+    {% block stylesheet %}
+    <!-- UIkit CSS -->
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"/>
+			<link
+				rel="stylesheet"
+				href="/assets/css/admin.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <nav class="uk-navbar-container">
+        <div class="uk-container rb-navbar">
+            <div uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <div><a class="rb-border-button" href="/">AIR CNC</a></div>   
+						    <li>Login</li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <div><a class="rb-border-button" href="/">Accueil</a></div>   
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div 
+        class="uk-position-center">
+        <div 
+            class="uk-card uk-card-default uk-card-body rb-form-login">
+            <form
+                method="post">
+                <div 
+                    class="uk-margin">
+                    <h2>
+                        Login
+                    </h2>
+                </div>
+                <div 
+                    class="uk-margin">
+                    <div 
+                        class="uk-inline">
+                        <span 
+                            class="uk-form-icon" 
+                            uk-icon="icon: user"></span>
+                        <input 
+                            class="uk-input rb-form-login" 
+                            type="text" 
+                            aria-label="Not clickable icon" 
+                            name="user">
+                    </div>
+                </div>
+                <div
+                    class="uk-margin">
+                    <div 
+                        class="uk-inline">
+                        <span 
+                            class="uk-form-icon uk-form-icon-flip" 
+                            uk-icon="icon: lock"></span>
+                        <input 
+                            class="uk-input rb-form-login" 
+                            type="password" 
+                            aria-label="Not clickable icon" 
+                            name="password">
+                    </div>
+                </div>
+                <div 
+                    class="uk-margin">
+                    <button 
+                        class="uk-button rb-button"
+                        type="submit" 
+                        name="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p class="footer uk-position-bottom">&copy; 2023 AIRCNC Tous droits réservés</p>
+    </footer>
+    {% endblock %}
+
+    {% block javascript %}
+    <!-- UIkit JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+            <script 
+                src="uikit/dist/js/uikit-icons.min.js"></script>
+    {% endblock %}
+</body>
+</html>
+
+

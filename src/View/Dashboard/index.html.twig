@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>
+    {% block title %}Dashboard{% endblock %}
+    </title>
+
+    {% block stylesheet %}
+    <!-- UIkit CSS -->
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"/>
+			<link
+				rel="stylesheet"
+				href="/assets/css/admin.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+<nav class="uk-navbar-container">
+    <div class="uk-container rb-navbar">
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <div><a class="rb-border-button" href="/">AIR CNC</a></div>   
+                        <li>Dashboard</li>
+                        <div>
+                            <a class="rb-navbar">Gestion des services</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="/rooms">Gestion des chambres</a></li>
+                                    <li><a href="/reservations">Gestion des reservations</a></li>
+                                    <li><a href="/users">Gestion des membres</a></li>
+                                    <li><a href="/mealplans">Gestion des options</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li><span uk-icon="icon: user; ratio: 1.5"></span>Admin</li>
+                    <div><a class="rb-border-button" href="/logout">Logout</a></div>   
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+            <div class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title rb-statistique">Statistique chambres</h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th class="uk-table-shrink">ID interne</th>
+                                    <th class="uk-table-shrink">Nom</th>
+                                    <th class="uk-table-shrink">Adresse</th>
+                                    <th class="uk-table-shrink">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rb-tbody">
+                                    <td>1</td>
+                                    <td>Chambre traditionnelle</td>
+                                    <td>25 boulevard de Lyon, 67000 Strasbourg</td>
+                                    <td><span uk-icon="eye"></span></td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>2</td>
+                                    <td>Chambre voyageur d'affaire</td>
+                                    <td>135 route de Mittelhausbergen, 67200 Strasbourg</td>
+                                    <td><span uk-icon="eye"></span></td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>3</td>
+                                    <td>Chambre cosy</td>
+                                    <td>13 rue de la première armée, 67000 Strasbourg</td>
+                                    <td><span uk-icon="eye"></span></td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>4</td>
+                                    <td>Chambre contemporaine</td>
+                                    <td>22 allée Léon Gambetta, 67000 Strasbourg</td>
+                                    <td><span uk-icon="eye"></span></td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>5</td>
+                                    <td>Chambre traditionnelle</td>
+                                    <td>13 allée de la Robertsau, 67000 Strasbourg</td>
+                                    <td><span uk-icon="eye-slash"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div>
+            </div>
+            <div class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title rb-statistique">Statistique membres</h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th class="uk-table-shrink uk-text-nowrap">ID</th>
+                                    <th class="uk-table-expand uk-text-nowrap"">User</th>
+                                    <th class="uk-table-expand uk-text-nowrap"">Prénom</th>
+                                    <th class="uk-table-expand uk-text-nowrap"">Nom</th>
+                                    <th class="uk-table-expand uk-text-nowrap"">Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rb-tbody">
+                                    <td>1</td>
+                                    <td>yavuz</td>
+                                    <td>Yavuz</td>
+                                    <td>Kutuk</td>
+                                    <td>God</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>2</td>
+                                    <td>ludivine</td>
+                                    <td>Ludivine</td>
+                                    <td>Martel</td>
+                                    <td>Goddess</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>3</td>
+                                    <td>radu</td>
+                                    <td>Radu</td>
+                                    <td>Bobes</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>4</td>
+                                    <td>roger</td>
+                                    <td>Roger</td>
+                                    <td>Aissan</td>
+                                    <td>Admin</td>
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div>
+            </div>
+            <div class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title rb-statistique">Statistique réservations</h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th class="uk-table-shrink">Nom chambre</th>
+                                    <th class="uk-table-expand">Nuits réservées</th>
+                                    <th class="uk-table-expand">Revenus</th>
+                                    <th class="uk-table-expand">Taux d'occupation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rb-tbody">
+                                    <td>Chambre traditionnelle</td>
+                                    <td>20</td>
+                                    <td>1600</td>
+                                    <td>5.47</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Chambre voyageur d'affaire</td>
+                                    <td>45</td>
+                                    <td>4500</td>
+                                    <td>12.32</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Chambre cosy</td>
+                                    <td>55</td>
+                                    <td>4950</td>
+                                    <td>15.06</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Chambre contemporaine</td>
+                                    <td>17</td>
+                                    <td>2040</td>
+                                    <td>4.65</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Chambre traditionnelle</td>
+                                    <td>5</td>
+                                    <td>500</td>
+                                    <td>1.36</td>
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div>
+            </div>
+            <div class="uk-card uk-card-hover uk-card-body">
+                <h3 class="uk-card-title rb-statistique">Statistique services</h3>
+                    <div class="uk-overflow-auto">
+                        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th class="uk-table-shrink">Type service</th>
+                                    <th class="uk-table-expand">Réservations</th>
+                                    <th class="uk-table-expand">revenus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rb-tbody">
+                                    <td>Petit-dejeuner</td>
+                                    <td>55</td>
+                                    <td>825</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Demi-pension</td>
+                                    <td>125</td>
+                                    <td>3750</td>
+                                </tr>
+                                <tr class="rb-tbody">
+                                    <td>Pension complète</td>
+                                    <td>89</td>
+                                    <td>4005</td>
+                                </tr>
+                            </tbody>
+                        </table>		
+                    </div>
+            </div>  
+    </div>
+</main>
+
+<footer>
+    <p class="footer">&copy; 2023 AIRCNC Tous droits réservés</p>
+</footer>
+    {% endblock %}
+
+    {% block javascript %}
+    <!-- UIkit JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+            <script 
+                src="uikit/dist/js/uikit-icons.min.js"></script>
+    {% endblock %}
+</body>
+</html>

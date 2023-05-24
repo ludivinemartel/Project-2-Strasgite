@@ -1,0 +1,49 @@
+.formulaire{
+    background-color: #D89723;
+    color: white;
+}
+
+h7 {
+    padding: 10px;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.input_box ,.text_area{
+    padding-top: 3%;
+    width : 80%;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+}
+
+.message{
+padding-top: 3%;
+}
+
+input, textarea{
+padding: 0.25em 0.5em;
+background-color: #D89723;
+border: solid #D89723;
+}
+    
+button {
+border: solid white;
+padding: 1% 4%;
+color: white;
+background-color: #D89723;
+margin-top: 3%;
+}
+
+@media screen and (max-width: 768px) {
+    h7 {
+    font-size: 2rem;
+    }
+    .input_box, .text_area , .message{
+    width: 80%;
+    padding-left: 5%;
+    }
+    button {
+    margin-top: 3%;
+    }
+    }

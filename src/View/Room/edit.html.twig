@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>
+    {% block title %}Edit Room{% endblock %}
+    </title>
+
+    {% block stylesheet %}
+    <!-- UIkit CSS -->
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"/>
+			<link
+				rel="stylesheet"
+				href="/assets/css/admin.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+        <section>
+		{% include 'Room/_form.html.twig' %}
+	</section>
+	<button class="uk-button rb-button">
+		<a href="/rooms/show?id={{room.id}}">Retour</a>
+	</button>   
+
+    <footer>
+        <p class="footer">&copy; 2023 AIRCNC Tous droits réservés</p>
+    </footer>
+    {% endblock %}
+
+    {% block javascript %}
+    <!-- UIkit JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+            <script 
+                src="uikit/dist/js/uikit-icons.min.js"></script>
+    {% endblock %}
+</body>
+</html>

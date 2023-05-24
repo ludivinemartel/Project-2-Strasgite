@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/images/favicon.png">
+
+    <title>
+    {% block title %}Show Room{% endblock %}
+    </title>
+
+    {% block stylesheet %}
+    <!-- UIkit CSS -->
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css"/>
+			<link
+				rel="stylesheet"
+				href="/assets/css/admin.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+        <nav class="uk-navbar-container">
+    <div class="uk-container rb-navbar">
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <div><a class="rb-border-button" href="/">AIR CNC</a></div>   
+						<li>Gestion des chambres</li>
+                        <div>
+                            <a class="rb-navbar">Gestion des services</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="/rooms">Gestion des chambres</a></li>
+                                    <li><a href="/reservations">Gestion des réservations</a></li>
+                                    <li><a href="/users">Gestion des membres</a></li>
+                                    <li><a href="/mealplans">Gestion des options</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+					<div><a class="rb-navbar" href="/dashboard">Dashboard</a></div> 
+                    <li><span uk-icon="icon: user; ratio: 1.5"></span>Admin</li>
+                    <div><a class="rb-border-button" href="/logout">Logout</a></div>   
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <h2>Fiche chambre</h2>
+	<div class=uk-grid>
+    	<div class="uk-width-1-5 uk-text-right">
+        	<ul class="uk-list">
+            	<li class="uk-height-1-10">ID :</li>
+                <li class="uk-height-1-10">ID interne :</li>
+				<li class="uk-height-1-10">Nom :</li>
+				<li class="uk-height-1-10">Capacité :</li>
+				<li class="uk-height-1-10">Prix :</li>
+				<li class="uk-height-1-10">Prix SP :</li>
+                <li class="uk-height-1-10">Description détaillée :</li>
+				<li class="uk-height-1-10">Description :</li>
+                <li class="uk-height-1-10">Adresse :</li>
+                <li class="uk-height-1-10">Image :</li>
+        	</ul>
+    	</div>
+
+    	<div class="uk-width-3-5">
+        	<ul class="uk-list">
+            	<div>{{ room.id }}</div>
+                <div>{{ room.name }}</div>
+				<div>{{ room.nameFront }}</div>
+				<div>{{ room.nbpersons }}</div>
+				<div>{{ room.price }}</div>
+				<div>{{ room.pricesp }}</div>
+                <div>{{ room.description }}</div>
+				<div>{{ room.resume }}</div>
+                <div>{{ room.address }}</div>
+                <div>{{ room.image }}</div>
+        	</ul>
+    	</div>
+
+		<div>
+			<a href="/rooms/edit?id={{room.id}}"><button class="uk-button rb-button">Edit</button></a>
+		</div>
+		<div>	
+			<form action="/rooms/delete" method="POST">
+				<input type="hidden" name="id" value="{{ room.id }}">
+				<button class="uk-button rb-button">Delete</button>
+			</form>
+		</div>
+	</div>
+
+	<button class="uk-button rb-button">
+		<a href="/rooms">Retour</a>
+	</button>
+</main>
+
+<footer>
+    <p class="footer">&copy; 2023 AIRCNC Tous droits réservés</p>
+</footer> 
+    {% endblock %}
+
+    {% block javascript %}
+    <!-- UIkit JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+            <script 
+                src="uikit/dist/js/uikit-icons.min.js"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,76 @@
+*{ padding: 0; margin: 0;}
+
+main{
+background-color: rgb(223, 229, 229);
+display: flex;
+padding-top: 10px;
+justify-content: center;
+margin-top: 45px;
+height: 150%;
+}
+
+.image{
+width: 100%;
+height: 100%;
+padding-top: 25px 
+}
+
+.text{
+font-size: 15px;
+padding: 20px;
+}
+
+.form{
+background-color: #cf9012;
+}
+
+.legend{
+padding: 10px;
+justify-content: center;
+
+}
+.form .uk_box{
+padding: 15px;
+}
+.container .image{
+height: 180px;
+width: 160%;
+padding: 10px;
+margin-left: 5px;
+}
+.container .form{
+margin-right: 25px;
+padding: 15px;
+border-radius: 2px;
+}
+
+.container .form input{
+border: none;
+border-bottom: solid 1px;
+}
+
+.container .form select{
+border: none;
+border-bottom: solid 1px;
+}
+
+.container .form button{
+margin-top: 30px;
+justify-content: center;
+}
+
+@media (max-width: 460px) {
+    .image{
+    padding: 60px;
+    }
+
+    .container{
+    flex-direction: column;
+    }
+    .container .text{
+    margin-bottom: 40px;
+    }
+    .container .form{
+     margin-bottom: 40px;
+    }
+}

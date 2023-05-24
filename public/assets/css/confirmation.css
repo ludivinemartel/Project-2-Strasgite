@@ -1,0 +1,106 @@
+form {
+ background-color: #D89723;
+color: white;
+}
+    
+    h3 {
+    padding: 10px;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    margin-left: 10%;
+    }
+    
+    h6 {
+    width : 40%;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    margin-left: 10%;
+    }
+    
+    .box_1{
+    margin-left: 10%;
+    }
+    
+    .inputBox_1{
+    padding-top: 2%;
+    }
+    
+    .inputBox_2{
+    padding-top: 3%;
+    width : 40%;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    }
+    
+    input{
+    padding: 0.25em 0.5em;
+    background-color: #D89723;
+    border: solid #D89723;
+    }
+    
+    button {
+    border: solid white;
+    padding: 1% 4%;
+    color: white;
+    background-color: #D89723;
+    margin-top: 3%;
+    }
+    
+    h3 {
+        padding: 10px;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+        margin-left: 10%;
+    }
+    
+    h6 {
+        width : 40%;
+        border-bottom: 2px solid white;
+        padding-bottom: 2px;
+        margin-left: 10%;
+        
+    }
+    
+    .box_1{
+        margin-left: 10%;
+    }
+    
+    .inputBox_1{
+        padding-top: 2%;
+    }
+    
+    .inputBox_2{
+        padding-top: 3%;
+        width : 40%;
+        border-bottom: 2px solid white;
+        padding-bottom: 2px;
+    }
+    
+    input{
+    
+    padding: 0.25em 0.5em;
+    background-color: #D89723;
+    border: solid #D89723;
+    
+    }
+    
+    button {
+        border: solid white;
+        padding: 1% 4%;
+        color: white;
+        background-color: #D89723;
+        margin-top: 3%;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+  .textetimages {
+    flex-direction: column;
+  }
+
+  .reservationform {
+    margin-top: 20px;
+  }
+}

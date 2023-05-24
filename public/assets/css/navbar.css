@@ -1,0 +1,82 @@
+*
+{
+margin: 0;
+}
+
+:root
+{
+--main-color :#d89723;
+}
+
+body 
+{
+font-family: 'Raleway', sans-serif;
+}
+
+nav ul li
+{
+list-style: none;
+padding: 20% 3%;
+}
+
+.icon
+{
+display: flex;
+} 
+
+nav
+{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-end;
+background-color: #d89723;
+}
+    
+ul
+{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+flex-wrap: nowrap;
+align-content: flex-end;
+align-items: center;
+}
+   
+ a
+{
+text-decoration: none;
+}
+
+.logo
+{
+height: 50px;
+width: 50px;
+position : absolute;
+left: 0;
+top : 0;
+}
+
+.icon ul .reservation
+{
+border-style: solid ;
+border-color: white; 
+padding: 1%;
+}
+
+/* Pour les écrans jusqu'à 768px de largeur */
+@media screen and (max-width: 768px) {
+    nav ul li {
+      padding-bottom : 5%;
+      padding: 2%;
+      font-size: 70%;
+    }
+  
+    .logo {
+        display : none;
+    }
+  
+    .icon ul .reservation {
+      padding: 5px;
+    }
+  }
