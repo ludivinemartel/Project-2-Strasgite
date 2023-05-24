@@ -52,31 +52,40 @@ Captures d'écran
 ----------------------------------
 
 **Page d'acceuil :**
+
 La page d'accueil se divise en 4 parties : le header avec le logo, la navbar. La partie de présentation de la maison d'hotes. Une partie de présentation des chambres sous la forme d'un accordéon. Une partie avec des avis clients. 
-
+ 
+<p align="center">
 <a href="https://ibb.co/Rp3qKpC"><img src="https://i.ibb.co/TB4sGBH/Capture-d-e-cran-2023-05-24-a-12-41-46.png" alt="Capture-d-e-cran-2023-05-24-a-12-41-46" border="0"></a>
+</p>
 
-<a href="https://ibb.co/ZMwxgtB"><img src="https://i.ibb.co/5RzLjtr/Capture-d-e-cran-2023-05-24-a-12-42-02.png" alt="Capture-d-e-cran-2023-05-24-a-12-42-02" border="0"></a>
-
+<p align="center">
 <a href="https://ibb.co/jvPkRQY"><img src="https://i.ibb.co/bgM5JCV/Capture-d-e-cran-2023-05-24-a-12-42-34.png" alt="Capture-d-e-cran-2023-05-24-a-12-42-34" border="0"></a>
-
-<a href="https://ibb.co/LvknWp6"><img src="https://i.ibb.co/CW1hZ0v/Capture-d-e-cran-2023-05-24-a-12-42-42.png" alt="Capture-d-e-cran-2023-05-24-a-12-42-42" border="0"></a>
+</p>
 
 **Page d'une chambre :**
+
 La page d'une chambre présente une image d'une chambre ainsi qu'une présentation, un prix et des options qui se met à jour en fonction de la chambre séléctionnée. Sur le coté se trouve la calendrier de réservation et l'ajout des options supplémentaires. 
 
-<a href="https://ibb.co/NtGcx8B"><img src="https://i.ibb.co/Dzj04x2/Capture-d-e-cran-2023-05-24-a-12-46-16.png" alt="Capture-d-e-cran-2023-05-24-a-12-46-16" border="0"></a>
+<p align="center">
+<a href="https://ibb.co/RTYqwxf"><img src="https://i.ibb.co/KxbJvMd/Capture-d-e-cran-2023-05-24-a-14-58-02.png" alt="Capture-d-e-cran-2023-05-24-a-14-58-02" border="0"></a>
+</p>
 
-**Page de confirmation de réservation:**
+**Page de confirmation de réservation :** 
+
 La page de confirmation de réservation permet de récupérer les données déjà renseignées dans le formulaire de réservation et calcul la totalité du prix de la réservation. Le client peut remplir le reste de ses données et recevoir un mail de confirmation. 
 
+<p align="center">
 <a href="https://ibb.co/FKbpyFs"><img src="https://i.ibb.co/PNZkPdT/Capture-d-e-cran-2023-05-24-a-12-46-43.png" alt="Capture-d-e-cran-2023-05-24-a-12-46-43" border="0"></a>
-
-------------------------------------------------------------------------------------------
-Pour une meilleure visualisation, n'hésitez pas à télécharger le projet!!
-------------------------------------------------------------------------------------------
+ </p>
+ 
+<hr>
+<p align="center" style="font-size: 24px;">
+  <strong>Pour une meilleure visualisation, n'hésitez pas à télécharger le projet !</strong>
+</p>
+<hr>
 
 Contact
 ------------------------------------
-Adresse mail : mrt.ludivine@gmail.com
-[LinkedIn](https://www.linkedin.com/in/ludivine-martel-549a56140/)
+* [LinkedIn](https://www.linkedin.com/in/ludivine-martel-549a56140/)
+* Adresse mail : mrt.ludivine@gmail.com
