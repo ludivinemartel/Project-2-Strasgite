@@ -21,7 +21,7 @@ Réalisation d'un CRUD (Create, Read, Update, Delete).
 GIT / GIT HUB.  
  
 
-Contributions personnelle
+Contributions personnelles
 --------------------------------------
 J'ai travaillé principalement sur :
 
@@ -51,9 +51,9 @@ Les technologies utilisées sont :
 Captures d'écran
 ----------------------------------
 
-**Page d'acceuil :**
+**Page d'accueil:**
 
-La page d'accueil se divise en 4 parties : le header avec le logo, la navbar. La partie de présentation de la maison d'hotes. Une partie de présentation des chambres sous la forme d'un accordéon. Une partie avec des avis clients. 
+La page d'accueil se divise en 4 parties : le header avec le logo, la navbar. La partie de présentation de la maison d'hôtes. Une partie de présentation des chambres sous la forme d'un accordéon. Une partie avec des avis clients. 
  
 <p align="center">
 <a href="https://ibb.co/Rp3qKpC"><img src="https://i.ibb.co/TB4sGBH/Capture-d-e-cran-2023-05-24-a-12-41-46.png" alt="Capture-d-e-cran-2023-05-24-a-12-41-46" border="0"></a>
@@ -65,7 +65,7 @@ La page d'accueil se divise en 4 parties : le header avec le logo, la navbar. La
 
 **Page d'une chambre :**
 
-La page d'une chambre présente une image d'une chambre ainsi qu'une présentation, un prix et des options qui se met à jour en fonction de la chambre séléctionnée. Sur le coté se trouve la calendrier de réservation et l'ajout des options supplémentaires. 
+La page d'une chambre présente une image d'une chambre ainsi qu'une présentation, un prix et des options qui se met à jour en fonction de la chambre sélectionnée. Sur le côté se trouve le calendrier de réservation et l'ajout des options supplémentaires. 
 
 <p align="center">
 <a href="https://ibb.co/RTYqwxf"><img src="https://i.ibb.co/KxbJvMd/Capture-d-e-cran-2023-05-24-a-14-58-02.png" alt="Capture-d-e-cran-2023-05-24-a-14-58-02" border="0"></a>
